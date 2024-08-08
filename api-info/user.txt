@@ -1,0 +1,88 @@
+
+Register user 
+
+POST ==>  http://localhost:6060/api/v1/user/register
+{
+    "fullName" : "sf",
+    "email" : "sf@gmail.com",
+    "phone" : "7769",
+    "role" : "recruiter",
+    "password" : "123"
+
+}
+
+curl
+curl --location 'http://localhost:6060/api/v1/user/register' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2NjZkYmQ0ZWFhNDBjZjZkNWEyOTE4MTIiLCJpYXQiOjE3MTkyMzA0MDIsImV4cCI6MTcxOTgzNTIwMn0.-n7Ngasf5H2-2sFt21DI46TMBZhEmSgqV-trwU0z-zw' \
+--data-raw '{
+    "fullName" : "sf",
+    "email" : "sf@gmail.com",
+    "phone" : "7769",
+    "role" : "recruiter",
+    "password" : "123"
+
+}'
+
+
+**********************************************************************************************************************************************************************
+
+
+Login user
+
+curl
+curl --location 'http://localhost:6060/api/v1/user/login' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMxMDkxODEsImV4cCI6MTcyMzE5NTU4MX0.j-nKRINzEPNIsCFcCn-wWkbrG_BPgpO4gbbmPM2ispo' \
+--data-raw '{
+    "email" : "sf@gmail.com",
+    "role" : "recruiter",
+    "password" : "123"
+}'
+
+
+POST  ==>  http://localhost:6060/api/v1/user/login
+{
+    "email" : "sf@gmail.com",
+    "role" : "recruiter",
+    "password" : "123"
+}
+
+
+**********************************************************************************************************************************************************************
+
+
+
+user logout
+
+GET  ==>  http://localhost:6060/api/v1/user/logout
+
+curl --location 'http://localhost:6060/api/v1/user/logout'
+
+
+
+**********************************************************************************************************************************************************************
+
+
+update user
+
+PUT  ==>  http://localhost:6060/api/v1/user/update
+{
+    "fullName" : "ssff"
+}
+
+curl --location --request PUT 'http://localhost:6060/api/v1/user/update' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMxMDk5MzUsImV4cCI6MTcyMzE5NjMzNX0.OcF5LBh8TgeKqyQRFyYBG5SVhmMjUlJJWWC0jKCsUjw' \
+--data '{
+    "fullName" : "ssff"
+}'
+
+
+
+**********************************************************************************************************************************************************************
+
+
+delete user
+
+DELETE  ==>  
