@@ -4,6 +4,7 @@ import cors from 'cors'
 import 'dotenv/config'
 import connectDB from './db/connectDB.js'
 import cookieParser from 'cookie-parser'
+import userRouter from './routes/userRoute.js'
 
 
 const app = express()
@@ -13,6 +14,9 @@ app.use(cors())
 app.use(morgan('dev'))
 app.use(cookieParser())
 
+
+//routes
+app.use('/api/v1/user' , userRouter)
 
 connectDB().then(() => {
     app.listen(process.env.PORT || 4500, () => {
