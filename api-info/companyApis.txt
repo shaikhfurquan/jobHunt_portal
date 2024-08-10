@@ -1,0 +1,62 @@
+
+Company Apis
+
+Register Company
+POST  ==>  http://localhost:6060/api/v1/company/register
+{
+    "companyName" : "SF World"
+}
+
+curl --location 'http://localhost:6060/api/v1/company/register' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMyNzQ2NjUsImV4cCI6MTcyMzM2MTA2NX0.2wQDrG-LSmLsKR0Bs3E9ngEp0ZgT4_7-zLNbICpjzTw' \
+--data '{
+    "companyName" : "SF World"
+}'
+
+
+*************************************************************************
+
+
+GET Company associated with login user
+GET  ==>  http://localhost:6060/api/v1/company/get
+
+curl --location 'http://localhost:6060/api/v1/company/get' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMyNzQ2NjUsImV4cCI6MTcyMzM2MTA2NX0.2wQDrG-LSmLsKR0Bs3E9ngEp0ZgT4_7-zLNbICpjzTw'
+
+
+
+*************************************************************************
+
+
+GET Company associated with login user
+GET  ==>  http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa
+
+curl --location 'http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMyNzQ2NjUsImV4cCI6MTcyMzM2MTA2NX0.2wQDrG-LSmLsKR0Bs3E9ngEp0ZgT4_7-zLNbICpjzTw'
+
+
+*************************************************************************
+
+UPDATE Company
+PUT  ==>  http://localhost:6060/api/v1/company/update/66b715c976604182c8e062f5
+{
+    "companyName" : "Postman"
+}
+
+
+
+curl --location --request PUT 'http://localhost:6060/api/v1/company/update/66b715c976604182c8e062f5' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMyNzQ2NjUsImV4cCI6MTcyMzM2MTA2NX0.2wQDrG-LSmLsKR0Bs3E9ngEp0ZgT4_7-zLNbICpjzTw' \
+--data '{
+    "companyName" : "Postman"
+}'
+
+
+
+*************************************************************************
+
+
+Delete Company
+DELETE  ==>  
