@@ -1,0 +1,71 @@
+
+Jobs Apis
+
+
+post a job
+
+POST  ==>  http://localhost:6060/api/v1/job/post
+{
+    "title": "Fron-end",
+     "description": "Frond developer having the 2 yr of experience", 
+    "requirements": "Api testing , postman, git", 
+    "salary": "12", 
+    "experience": "1 year",
+     "location" : "hyderabad", 
+     "jobType": "full-time",
+      "position" : "12",
+      "companyId":"66b715c976604182c8e062f5"
+}
+
+
+curl --location 'http://localhost:6060/api/v1/job/post' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMzMTMwMTUsImV4cCI6MTcyMzM5OTQxNX0.bgGRoyqAxXuucRpRbjLQWywo0L5e5roAwqt5p6WUj9s' \
+--data '{
+    "title": "Fron-end",
+     "description": "Frond developer having the 2 yr of experience", 
+    "requirements": "Api testing , postman, git", 
+    "salary": "12", 
+    "experience": "1 year",
+     "location" : "hyderabad", 
+     "jobType": "full-time",
+      "position" : "12",
+      "companyId":"66b715c976604182c8e062f5"
+}'
+
+
+********************************************************************************************************************************
+
+
+Get All Jobs
+
+GET  ==>  http://localhost:6060/api/v1/job/getAllJobs
+
+curl --location 'http://localhost:6060/api/v1/job/getAllJobs' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMzMTMwMTUsImV4cCI6MTcyMzM5OTQxNX0.bgGRoyqAxXuucRpRbjLQWywo0L5e5roAwqt5p6WUj9s'
+
+
+
+********************************************************************************************************************************
+
+
+GET Admin/login user jobs
+GET  ==>  http://localhost:6060/api/v1/job/getAdminJobs
+
+curl --location 'http://localhost:6060/api/v1/job/getAdminJobs' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMzMTMwMTUsImV4cCI6MTcyMzM5OTQxNX0.bgGRoyqAxXuucRpRbjLQWywo0L5e5roAwqt5p6WUj9s'
+
+
+
+********************************************************************************************************************************
+
+
+GET job by Id
+GET  ==>  http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc
+
+curl --location 'http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI0ODAwMDJjZTFkNmI5YTg5YTRiMmEiLCJpYXQiOjE3MjMzMTMwMTUsImV4cCI6MTcyMzM5OTQxNX0.bgGRoyqAxXuucRpRbjLQWywo0L5e5roAwqt5p6WUj9s'
+
+
+
+********************************************************************************************************************************
