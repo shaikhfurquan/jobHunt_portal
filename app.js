@@ -7,6 +7,7 @@ import cookieParser from 'cookie-parser'
 import userRouter from './routes/userRoute.js'
 import companyRouter from './routes/companyRoute.js'
 import jobRouter from './routes/jobRoute.js'
+import applicationRouter from './routes/applicationRoute.js'
 
 
 const app = express()
@@ -21,6 +22,8 @@ app.use(cookieParser())
 app.use('/api/v1/user' , userRouter)
 app.use('/api/v1/company' , companyRouter)
 app.use('/api/v1/job' , jobRouter)
+app.use('/api/v1/application' , applicationRouter)
+
 
 connectDB().then(() => {
     app.listen(process.env.PORT || 4500, () => {
