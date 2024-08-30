@@ -1,0 +1,53 @@
+Application Apis
+
+
+Apply job
+
+POST  ==>  
+http://localhost:6060/api/v1/application/apply/66b7ae3b3fce210e5a9987fc
+http://localhost:6060/api/v1/application/apply/jobId
+
+
+curl --location --request POST 'http://localhost:6060/api/v1/application/apply/66b7ae3b3fce210e5a9987fc' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI4Y2RiZDJlZmNjMmNkYTNkYTNjYjgiLCJpYXQiOjE3MjMzODczMzcsImV4cCI6MTcyMzQ3MzczN30.mX9Q1sDU8FC2DdVQBSnU57jgxgScje5TgqLoe3SXUb4'
+
+
+***************************************************************************************************************
+
+
+GET applied jobs
+GET  ==>  http://localhost:6060/api/v1/application/applied/get
+
+curl --location 'http://localhost:6060/api/v1/application/applied/get' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmI4Y2RiZDJlZmNjMmNkYTNkYTNjYjgiLCJpYXQiOjE3MjQ4MjgzNTMsImV4cCI6MTcyNDkxNDc1M30.D3kd3DEmDPVUX3ThEO9JC0R1_FMHJlbATebI84gbi64'
+
+
+*****************************************************************************************************************
+
+GET Applicants
+
+GET  ==>  http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants
+GET  ==>  http://localhost:6060/api/v1/application/jobId/applicants
+
+curl --location 'http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNlZGZhNGI2MWI0YjIwM2Y3N2RiZjUiLCJpYXQiOjE3MjUwMjE0MDAsImV4cCI6MTcyNTEwNzgwMH0.H0YdVVLF1y3ZytaSOoILV_fiPooWbK8t1zlhaxw2QZc'
+
+
+************************************************************************************************************
+
+
+UPDATE STATUS
+
+POST  ==>  http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452e5/update
+           http://localhost:6060/api/v1/application/status/applicationId/update
+
+{
+    "status" : "accepted"
+}
+
+curl --location 'http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452e5/update' \
+--header 'Content-Type: application/json' \
+--header 'Cookie: token=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NmNlZGZhNGI2MWI0YjIwM2Y3N2RiZjUiLCJpYXQiOjE3MjUwMjE0MDAsImV4cCI6MTcyNTEwNzgwMH0.H0YdVVLF1y3ZytaSOoILV_fiPooWbK8t1zlhaxw2QZc' \
+--data '{
+    "status" : "accepted"
+}'
