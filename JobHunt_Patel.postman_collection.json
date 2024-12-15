@@ -1,0 +1,478 @@
+{
+	"info": {
+		"_postman_id": "4f48304a-6c47-4132-9872-d2245376a81c",
+		"name": "JobHunt_Patel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "33188247"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "user_register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"op\",\r\n    \"email\" : \"op@gmail.com\",\r\n    \"phone\" : \"7769\",\r\n    \"role\" : \"student\",\r\n    \"password\" : \"123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/user/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"op\",\r\n    \"email\" : \"op@gmail.com\",\r\n    \"phone\" : \"7769\",\r\n    \"role\" : \"student\",\r\n    \"password\" : \"123\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/user/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"fullName\" : \"sf\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/user/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "user_delete",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "user_logout",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/user/logout",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"user",
+								"logout"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "company",
+			"item": [
+				{
+					"name": "register_comp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\" : \"Recruiter World\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/company/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"company",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_user_comp",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/company/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"company",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_comp_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"company",
+								"get",
+								"66b7169576604182c8e062fa"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_comp",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"companyName\" : \"Postman\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/company/update/66b715c976604182c8e062f5",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"company",
+								"update",
+								"66b715c976604182c8e062f5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete_comp",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "job",
+			"item": [
+				{
+					"name": "post-job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"title\": \"Front-end\",\r\n     \"description\": \"Frond developer having the 2 yr of experience\", \r\n    \"requirements\": \"Api testing , postman, git\", \r\n    \"salary\": \"12\", \r\n    \"experience\": \"1 year\",\r\n     \"location\" : \"hyderabad\", \r\n     \"jobType\": \"full-time\",\r\n      \"position\" : \"12\",\r\n      \"companyId\":\"66b715c976604182c8e062f5\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/job/post",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"post"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_all_jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/job/getAllJobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"getAllJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_admin_jobs",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/job/getAdminJobs",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"getAdminJobs"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_job_by_id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"job",
+								"get",
+								"66b7ae3b3fce210e5a9987fc"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "application",
+			"item": [
+				{
+					"name": "apply_job",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"status\" : \"accepted\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452e5/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"status",
+								"66d1bed88beb71fb163452e5",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_applied_job",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/application/applied/get",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"applied",
+								"get"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get_applicants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"66d1be4f21764cd9ebbdf117",
+								"applicants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update_status",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:6060/api/v1/application/apply/66d1be4f21764cd9ebbdf117",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "6060",
+							"path": [
+								"api",
+								"v1",
+								"application",
+								"apply",
+								"66d1be4f21764cd9ebbdf117"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
