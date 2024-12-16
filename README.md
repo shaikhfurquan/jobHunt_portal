@@ -4,10 +4,10 @@ This document outlines the available API endpoints for User, Company, Job, and A
 
 ## Table of Contents
 
-- [User  APIs](#user-apis)
+- [User APIs](#user-apis)
   - [Register User](#register-user)
   - [Login User](#login-user)
-  - [User  Logout](#user-logout)
+  - [User Logout](#user-logout)
   - [Update User](#update-user)
   - [Delete User](#delete-user)
 
@@ -115,17 +115,11 @@ This section provides details about the User APIs for the Job Hunt Portal applic
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
-## Notes
-- Replace `YOUR_TOKEN_HERE` with the actual token obtained during login.
-- Ensure that the server is running on `localhost:6060` or adjust the URL accordingly if hosted elsewhere.
-
-Feel free to reach out for any questions or further clarifications regarding the API usage!
-
 ---
 
 ## Company APIs
 
-This section provides details about the Company APIs for the Job Hunt Portal application . Below are the available endpoints for company management.
+This section provides details about the Company APIs for the Job Hunt Portal application. Below are the available endpoints for company management.
 
 ### 1. Register Company
 - **Endpoint:** `POST /api/v1/company/register`
@@ -187,12 +181,6 @@ This section provides details about the Company APIs for the Job Hunt Portal app
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
-## Notes
-- Replace `YOUR_TOKEN_HERE` with the actual token obtained during login.
-- Ensure that the server is running on `localhost:6060` or adjust the URL accordingly if hosted elsewhere.
-
-Feel free to reach out for any questions or further clarifications regarding the API usage!
-
 ---
 
 ## Jobs APIs
@@ -249,7 +237,6 @@ This section provides details about the Jobs APIs for the Job Hunt Portal applic
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
-###  ```bash
 ### 4. Get Job by ID
 - **Endpoint:** `GET /api/v1/job/get/{jobId}`
 - **CURL Example:**
@@ -257,12 +244,6 @@ This section provides details about the Jobs APIs for the Job Hunt Portal applic
     curl --location 'http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc' \
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
-
-## Notes
-- Replace `YOUR_TOKEN_HERE` with the actual token obtained during login.
-- Ensure that the server is running on `localhost:6060` or adjust the URL accordingly if hosted elsewhere.
-
-Feel free to reach out for any questions or further clarifications regarding the API usage!
 
 ---
 
@@ -279,41 +260,39 @@ This section provides details about the Application APIs for the Job Hunt Portal
     ```
 
 ### 2. Get Applied Jobs
-- **Endpoint:** `GET /api/v1/application/applied/get`
+- **Endpoint:** `GET /api/v1/application/getAppliedJobs`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/applied/get' \
+    curl --location 'http://localhost:6060/api/v1/application/getAppliedJobs' \
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
 ### 3. Get Applicants for a Job
-- **Endpoint:** `GET /api/v1/application/{jobId}/applicants`
+- **Endpoint:** `GET /api/v1/application/getApplicants/{jobId}`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants' \
+    curl --location 'http://localhost:6060/api/v1/application/getApplicants/66b7ae3b3fce210e5a9987fc' \
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
 ### 4. Update Application Status
-- **Endpoint:** `POST /api/v1/application/status/{applicationId}/update`
+- **Endpoint:** `PUT /api/v1/application/updateStatus/{applicationId}`
 - **Request Body:**
     ```json
     {
-        "status": "accepted"
+        "status": "hired"
     }
     ```
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452e5/update' \
+    curl --location --request PUT 'http://localhost:6060/api/v1/application/updateStatus/66b7ae3b3fce210e5a9987fc' \
     --header 'Content-Type: application/json' \
     --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
-        "status": "accepted"
+        "status": "hired"
     }'
     ```
 
-## Notes
-- Replace `YOUR_TOKEN_HERE` with the actual token obtained during login.
-- Ensure that the server is running on `localhost:6060` or adjust the URL accordingly if hosted elsewhere.
+---
 
-Feel free to reach out for any questions or further clarifications regarding the API usage!
+This setup will allow users to click on the links in the Table of Contents and navigate directly to the relevant section for each API.
