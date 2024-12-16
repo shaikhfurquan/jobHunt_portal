@@ -1,5 +1,37 @@
 # jobHunt_portal
 
+
+## API Endpoints Overview
+
+### User APIs
+1. **Register User**: `POST /api/v1/user/register`
+2. **Login User**: `POST /api/v1/user/login`
+3. **User Logout**: `GET /api/v1/user/logout`
+4. **Update User**: `PUT /api/v1/user/update`
+5. **Delete User**: `DELETE /api/v1/user/delete/{userId}`
+
+### Company APIs
+1. **Register Company**: `POST /api/v1/company/register`
+2. **Get Company Associated with Login User**: `GET /api/v1/company/get`
+3. **Get Specific Company by ID**: `GET /api/v1/company/get/{companyId}`
+4. **Update Company**: `PUT /api/v1/company/update/{companyId}`
+5. **Delete Company**: `DELETE /api/v1/company/delete/{companyId}`
+
+### Jobs APIs
+1. **Post a Job**: `POST /api/v1/job/post`
+2. **Get All Jobs**: `GET /api/v1/job/getAllJobs`
+3. **Get Admin/User Jobs**: `GET /api/v1/job/getAdminJobs`
+4. **Get Job by ID**: `GET /api/v1/job/get/{jobId}`
+
+### Application APIs
+1. **Apply for a Job**: `POST /api/v1/application/apply/{jobId}`
+2. **Get Applied Jobs**: `GET /api/v1/application/applied/get`
+3. **Get Applicants for a Job**: `GET /api/v1/application/{jobId}/applicants`
+4. **Update Application Status**: `POST /api/v1/application/status/{applicationId}/update`
+
+---
+
+
 # User APIs
 
 This section provides details about the User APIs for the Advanced Social Media application. Below are the available endpoints for user management.
