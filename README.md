@@ -1,33 +1,35 @@
 # jobHunt_portal
 
 
-## API Endpoints Overview
+This document outlines the available API endpoints for User, Company, Job, and Application management in the system. Below is a detailed overview of each endpoint, including its HTTP method, path, and a brief description.
 
-### User APIs
-1. **Register User**: `POST /api/v1/user/register`
-2. **Login User**: `POST /api/v1/user/login`
-3. **User Logout**: `GET /api/v1/user/logout`
-4. **Update User**: `PUT /api/v1/user/update`
-5. **Delete User**: `DELETE /api/v1/user/delete/{userId}`
+## Table of Contents
 
-### Company APIs
-1. **Register Company**: `POST /api/v1/company/register`
-2. **Get Company Associated with Login User**: `GET /api/v1/company/get`
-3. **Get Specific Company by ID**: `GET /api/v1/company/get/{companyId}`
-4. **Update Company**: `PUT /api/v1/company/update/{companyId}`
-5. **Delete Company**: `DELETE /api/v1/company/delete/{companyId}`
+- [User APIs](#user-apis)
+  - [Register User](#register-user)
+  - [Login User](#login-user)
+  - [User Logout](#user-logout)
+  - [Update User](#update-user)
+  - [Delete User](#delete-user)
 
-### Jobs APIs
-1. **Post a Job**: `POST /api/v1/job/post`
-2. **Get All Jobs**: `GET /api/v1/job/getAllJobs`
-3. **Get Admin/User Jobs**: `GET /api/v1/job/getAdminJobs`
-4. **Get Job by ID**: `GET /api/v1/job/get/{jobId}`
+- [Company APIs](#company-apis)
+  - [Register Company](#register-company)
+  - [Get Company Associated with Login User](#get-company-associated-with-login-user)
+  - [Get Specific Company by ID](#get-specific-company-by-id)
+  - [Update Company](#update-company)
+  - [Delete Company](#delete-company)
 
-### Application APIs
-1. **Apply for a Job**: `POST /api/v1/application/apply/{jobId}`
-2. **Get Applied Jobs**: `GET /api/v1/application/applied/get`
-3. **Get Applicants for a Job**: `GET /api/v1/application/{jobId}/applicants`
-4. **Update Application Status**: `POST /api/v1/application/status/{applicationId}/update`
+- [Jobs APIs](#jobs-apis)
+  - [Post a Job](#post-a-job)
+  - [Get All Jobs](#get-all-jobs)
+  - [Get Admin/User Jobs](#get-adminuser-jobs)
+  - [Get Job by ID](#get-job-by-id)
+
+- [Application APIs](#application-apis)
+  - [Apply for a Job](#apply-for-a-job)
+  - [Get Applied Jobs](#get-applied-jobs)
+  - [Get Applicants for a Job](#get-applicants-for-a-job)
+  - [Update Application Status](#update-application-status)
 
 ---
 
