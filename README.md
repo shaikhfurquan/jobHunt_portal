@@ -1,43 +1,33 @@
-# Job Hunt Portal API Documentation
+# Job Hunt API Documentation
 
-This document outlines the available API endpoints for User, Company, Job, and Application management in the Job Hunt Portal system. Below is a detailed overview of each endpoint, including its HTTP method, path, and a brief description.
-
-## Table of Contents
-
-- [User APIs](#user-apis)
-  - [Register User](#register-user)
-  - [Login User](#login-user)
-  - [User Logout](#user-logout)
-  - [Update User](#update-user)
-  - [Delete User](#delete-user)
-
+## Available APIs
+- [User  APIs](#user-apis)
+  - [1. Register User](#1-register-user)
+  - [2. Login User](#2-login-user)
+  - [3. User Logout](#3-user-logout)
+  - [4. Update User](#4-update-user)
 - [Company APIs](#company-apis)
-  - [Register Company](#register-company)
-  - [Get Company Associated with Login User](#get-company-associated-with-login-user)
-  - [Get Specific Company by ID](#get-specific-company-by-id)
-  - [Update Company](#update-company)
-  - [Delete Company](#delete-company)
-
-- [Jobs APIs](#jobs-apis)
-  - [Post a Job](#post-a-job)
-  - [Get All Jobs](#get-all-jobs)
-  - [Get Admin/User Jobs](#get-adminuser-jobs)
-  - [Get Job by ID](#get-job-by-id)
-
+  - [1. Register Company](#1-register-company)
+  - [2. Get Company Associated with Login User](#2-get-company-associated-with-login-user)
+  - [3. Get Company by ID](#3-get-company-by-id)
+  - [4. Update Company](#4-update-company)
+- [Job APIs](#job-apis)
+  - [1. Post a Job](#1-post-a-job)
+  - [2. Get All Jobs](#2-get-all-jobs)
+  - [3. Get Admin/User Jobs](#3-get-adminuser-jobs)
+  - [4. Get Job by ID](#4-get-job-by-id)
 - [Application APIs](#application-apis)
-  - [Apply for a Job](#apply-for-a-job)
-  - [Get Applied Jobs](#get-applied-jobs)
-  - [Get Applicants for a Job](#get-applicants-for-a-job)
-  - [Update Application Status](#update-application-status)
+  - [1. Apply for Job](#1-apply-for-job)
+  - [2. Get Applied Jobs](#2-get-applied-jobs)
+  - [3. Get Applicants](#3-get-applicants)
+  - [4. Update Application Status](#4-update-application-status)
 
 ---
 
 ## User APIs
 
-This section provides details about the User APIs for the Job Hunt Portal application. Below are the available endpoints for user management.
-
 ### 1. Register User
-- **Endpoint:** `POST /api/v1/user/register`
+- **Endpoint:** `POST http://localhost:6060/api/v1/user/register`
 - **Request Body:**
     ```json
     {
@@ -62,7 +52,7 @@ This section provides details about the User APIs for the Job Hunt Portal applic
     ```
 
 ### 2. Login User
-- **Endpoint:** `POST /api/v1/user/login`
+- **Endpoint:** `POST http://localhost:6060/api/v1/user/login`
 - **Request Body:**
     ```json
     {
@@ -83,14 +73,14 @@ This section provides details about the User APIs for the Job Hunt Portal applic
     ```
 
 ### 3. User Logout
-- **Endpoint:** `GET /api/v1/user/logout`
+- **Endpoint:** `GET http://localhost:6060/api/v1/user/logout`
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/user/logout'
     ```
 
 ### 4. Update User
-- **Endpoint:** `PUT /api/v1/user/update`
+- **Endpoint:** `PUT http://localhost:6060/api/v1/user/update`
 - **Request Body:**
     ```json
     {
@@ -101,28 +91,17 @@ This section provides details about the User APIs for the Job Hunt Portal applic
     ```bash
     curl --location --request PUT 'http://localhost:6060/api/v1/user/update' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
         "fullName": "ssff"
     }'
-    ```
-
-### 5. Delete User
-- **Endpoint:** `DELETE /api/v1/user/delete/{userId}`
-- **CURL Example:**
-    ```bash
-    curl --location --request DELETE 'http://localhost:6060/api/v1/user/delete/{userId}' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
 ---
 
 ## Company APIs
 
-This section provides details about the Company APIs for the Job Hunt Portal application. Below are the available endpoints for company management.
-
 ### 1. Register Company
-- **Endpoint:** `POST /api/v1/company/register`
+- **Endpoint:** `POST http://localhost:6060/api/v1/company/register`
 - **Request Body:**
     ```json
     {
@@ -133,30 +112,26 @@ This section provides details about the Company APIs for the Job Hunt Portal app
     ```bash
     curl --location 'http://localhost:6060/api/v1/company/register' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
         "companyName": "SF World"
     }'
     ```
 
 ### 2. Get Company Associated with Login User
-- **Endpoint:** `GET /api/v1/company/get`
+- **Endpoint:** `GET http://localhost:6060/api/v1/company/get`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/company/get' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/company/get'
     ```
 
-### 3. Get Specific Company by ID
-- **Endpoint:** `GET /api/v1/company/get/{companyId}`
+### 3. Get Company by ID - **Endpoint:** `GET http://localhost:6060/api/v1/company/get/{companyId}`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa'
     ```
 
 ### 4. Update Company
-- **Endpoint:** `PUT /api/v1/company/update/{companyId}`
+- **Endpoint:** `PUT http://localhost:6060/api/v1/company/update/{companyId}`
 - **Request Body:**
     ```json
     {
@@ -167,28 +142,17 @@ This section provides details about the Company APIs for the Job Hunt Portal app
     ```bash
     curl --location --request PUT 'http://localhost:6060/api/v1/company/update/66b715c976604182c8e062f5' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
         "companyName": "Postman"
     }'
     ```
 
-### 5. Delete Company
-- **Endpoint:** `DELETE /api/v1/company/delete/{companyId}`
-- **CURL Example:**
-    ```bash
-    curl --location --request DELETE 'http://localhost:6060/api/v1/company/delete/{companyId}' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
-    ```
-
 ---
 
-## Jobs APIs
-
-This section provides details about the Jobs APIs for the Job Hunt Portal application. Below are the available endpoints for job management.
+## Job APIs
 
 ### 1. Post a Job
-- **Endpoint:** `POST /api/v1/job/post`
+- **Endpoint:** `POST http://localhost:6060/api/v1/job/post`
 - **Request Body:**
     ```json
     {
@@ -207,7 +171,6 @@ This section provides details about the Jobs APIs for the Job Hunt Portal applic
     ```bash
     curl --location 'http://localhost:6060/api/v1/job/post' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
         "title": "Front-end",
         "description": "Front developer having 2 years of experience",
@@ -222,77 +185,64 @@ This section provides details about the Jobs APIs for the Job Hunt Portal applic
     ```
 
 ### 2. Get All Jobs
-- **Endpoint:** `GET /api/v1/job/getAllJobs`
+- **Endpoint:** `GET http://localhost:6060/api/v1/job/getAllJobs`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/job/getAllJobs' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/job/getAllJobs'
     ```
 
 ### 3. Get Admin/User Jobs
-- **Endpoint:** `GET /api/v1/job/getAdminJobs`
+- **Endpoint:** `GET http://localhost:6060/api/v1/job/getAdminJobs`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/job/getAdminJobs' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/job/getAdminJobs'
     ```
 
 ### 4. Get Job by ID
-- **Endpoint:** `GET /api/v1/job/get/{jobId}`
+- **Endpoint:** `GET http://localhost:6060/api/v1/job/get/{jobId}`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc'
     ```
 
 ---
 
 ## Application APIs
 
-This section provides details about the Application APIs for the Job Hunt Portal application. Below are the available endpoints for job application management.
-
-### 1. Apply for a Job
-- **Endpoint:** `POST /api/v1/application/apply/{jobId}`
+### 1. Apply for Job
+- **Endpoint:** `POST http://localhost:6060/api/v1/application/apply/{jobId}`
 - **CURL Example:**
     ```bash
-    curl --location --request POST 'http://localhost:6060/api/v1/application/apply/66b7ae3b3fce210e5a9987fc' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location --request POST 'http://localhost:6060/api/v1/application/apply/66b7ae3b3fce210e5a9987fc'
     ```
 
 ### 2. Get Applied Jobs
-- **Endpoint:** `GET /api/v1/application/getAppliedJobs`
+- **Endpoint:** `GET http://localhost:6060/api/v1/application/applied/get`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/getAppliedJobs' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/application/applied/get'
     ```
 
-### 3. Get Applicants for a Job
-- **Endpoint:** `GET /api/v1/application/getApplicants/{jobId}`
+### 3. Get Applicants
+- **Endpoint:** `GET http://localhost:6060/api/v1/application/{jobId}/applicants`
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/getApplicants/66b7ae3b3fce210e5a9987fc' \
-    --header 'Cookie: YOUR_TOKEN_HERE'
+    curl --location 'http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants'
     ```
 
 ### 4. Update Application Status
-- **Endpoint:** `PUT /api/v1/application/updateStatus/{applicationId}`
+- **Endpoint:** `POST http://localhost:6060/api/v1/application/status/{applicationId}/update`
 - **Request Body:**
     ```json
     {
-        "status": "hired"
+        "status": "accepted"
     }
     ```
 - **CURL Example:**
     ```bash
-    curl --location --request PUT 'http://localhost:6060/api/v1/application/updateStatus/66b7ae3b3fce210e5a9987fc' \
+    curl --location 'http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452 e5/update' \
     --header 'Content-Type: application/json' \
-    --header 'Cookie: YOUR_TOKEN_HERE' \
     --data '{
-        "status": "hired"
+        "status": "accepted"
     }'
     ```
-
----
-
-This setup will allow users to click on the links in the Table of Contents and navigate directly to the relevant section for each API.
