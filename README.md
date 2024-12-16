@@ -1,14 +1,13 @@
-# jobHunt_portal
+# Job Hunt Portal API Documentation
 
-
-This document outlines the available API endpoints for User, Company, Job, and Application management in the system. Below is a detailed overview of each endpoint, including its HTTP method, path, and a brief description.
+This document outlines the available API endpoints for User, Company, Job, and Application management in the Job Hunt Portal system. Below is a detailed overview of each endpoint, including its HTTP method, path, and a brief description.
 
 ## Table of Contents
 
-- [User APIs](#user-apis)
+- [User  APIs](#user-apis)
   - [Register User](#register-user)
   - [Login User](#login-user)
-  - [User Logout](#user-logout)
+  - [User  Logout](#user-logout)
   - [Update User](#update-user)
   - [Delete User](#delete-user)
 
@@ -33,10 +32,9 @@ This document outlines the available API endpoints for User, Company, Job, and A
 
 ---
 
+## User APIs
 
-# User APIs
-
-This section provides details about the User APIs for the Advanced Social Media application. Below are the available endpoints for user management.
+This section provides details about the User APIs for the Job Hunt Portal application. Below are the available endpoints for user management.
 
 ### 1. Register User
 - **Endpoint:** `POST /api/v1/user/register`
@@ -123,12 +121,11 @@ This section provides details about the User APIs for the Advanced Social Media 
 
 Feel free to reach out for any questions or further clarifications regarding the API usage!
 
+---
 
+## Company APIs
 
-
-# Company APIs
-
-This section provides details about the Company APIs for the Advanced Social Media application. Below are the available endpoints for company management.
+This section provides details about the Company APIs for the Job Hunt Portal application . Below are the available endpoints for company management.
 
 ### 1. Register Company
 - **Endpoint:** `POST /api/v1/company/register`
@@ -196,12 +193,11 @@ This section provides details about the Company APIs for the Advanced Social Med
 
 Feel free to reach out for any questions or further clarifications regarding the API usage!
 
+---
 
+## Jobs APIs
 
-
-# Jobs APIs
-
-This section provides details about the Jobs APIs for the Advanced Social Media application. Below are the available endpoints for job management.
+This section provides details about the Jobs APIs for the Job Hunt Portal application. Below are the available endpoints for job management.
 
 ### 1. Post a Job
 - **Endpoint:** `POST /api/v1/job/post`
@@ -253,6 +249,7 @@ This section provides details about the Jobs APIs for the Advanced Social Media 
     --header 'Cookie: YOUR_TOKEN_HERE'
     ```
 
+###  ```bash
 ### 4. Get Job by ID
 - **Endpoint:** `GET /api/v1/job/get/{jobId}`
 - **CURL Example:**
@@ -267,12 +264,11 @@ This section provides details about the Jobs APIs for the Advanced Social Media 
 
 Feel free to reach out for any questions or further clarifications regarding the API usage!
 
+---
 
+## Application APIs
 
-
-# Application APIs
-
-This section provides details about the Application APIs for the Advanced Social Media application. Below are the available endpoints for job application management.
+This section provides details about the Application APIs for the Job Hunt Portal application. Below are the available endpoints for job application management.
 
 ### 1. Apply for a Job
 - **Endpoint:** `POST /api/v1/application/apply/{jobId}`
