@@ -28,6 +28,7 @@
 
 ### 1. Register User
 - **Endpoint:** `POST http://localhost:6060/api/v1/user/register`
+- **Description:** Register a new user in the job hunt system.
 - **Request Body:**
     ```json
     {
@@ -53,6 +54,7 @@
 
 ### 2. Login User
 - **Endpoint:** `POST http://localhost:6060/api/v1/user/login`
+- **Description:** Authenticate a user and return a session token.
 - **Request Body:**
     ```json
     {
@@ -74,6 +76,7 @@
 
 ### 3. User Logout
 - **Endpoint:** `GET http://localhost:6060/api/v1/user/logout`
+- **Description:** Log out the currently authenticated user and invalidate the session token.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/user/logout'
@@ -81,6 +84,7 @@
 
 ### 4. Update User
 - **Endpoint:** `PUT http://localhost:6060/api/v1/user/update`
+- **Description:** Update the profile information of the logged-in user.
 - **Request Body:**
     ```json
     {
@@ -102,6 +106,7 @@
 
 ### 1. Register Company
 - **Endpoint:** `POST http://localhost:6060/api/v1/company/register`
+- **Description:** Register a new company in the job hunt system.
 - **Request Body:**
     ```json
     {
@@ -119,12 +124,15 @@
 
 ### 2. Get Company Associated with Login User
 - **Endpoint:** `GET http://localhost:6060/api/v1/company/get`
+- **Description:** Retrieve the company details associated with the currently logged-in user.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/company/get'
     ```
 
-### 3. Get Company by ID - **Endpoint:** `GET http://localhost:6060/api/v1/company/get/{companyId}`
+### 3. Get Company by ID
+- **Endpoint:** `GET http://localhost:6060/api/v1/company/get/{companyId}`
+- **Description:** Retrieve details of a specific company by its ID.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/company/get/66b7169576604182c8e062fa'
@@ -132,6 +140,7 @@
 
 ### 4. Update Company
 - **Endpoint:** `PUT http://localhost:6060/api/v1/company/update/{companyId}`
+- **Description:** Update the details of an existing company.
 - **Request Body:**
     ```json
     {
@@ -153,6 +162,7 @@
 
 ### 1. Post a Job
 - **Endpoint:** `POST http://localhost:6060/api/v1/job/post`
+- **Description:** Create a new job listing in the system.
 - **Request Body:**
     ```json
     {
@@ -186,6 +196,7 @@
 
 ### 2. Get All Jobs
 - **Endpoint:** `GET http://localhost:6060/api/v1/job/getAllJobs`
+- **Description:** Retrieve a list of all job postings in the system.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/job/getAllJobs'
@@ -193,6 +204,7 @@
 
 ### 3. Get Admin/User Jobs
 - **Endpoint:** `GET http://localhost:6060/api/v1/job/getAdminJobs`
+- **Description:** Retrieve job postings associated with the admin or the logged-in user.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/job/getAdminJobs'
@@ -200,6 +212,7 @@
 
 ### 4. Get Job by ID
 - **Endpoint:** `GET http://localhost:6060/api/v1/job/get/{jobId}`
+- **Description:** Retrieve details of a specific job by its ID.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/job/get/66b7ae3b3fce210e5a9987fc'
@@ -211,6 +224,7 @@
 
 ### 1. Apply for Job
 - **Endpoint:** `POST http://localhost:6060/api/v1/application/apply/{jobId}`
+- **Description:** Submit an application for a specific job.
 - **CURL Example:**
     ```bash
     curl --location --request POST 'http://localhost:6060/api/v1/application/apply/66b7ae3b3fce210e5a9987fc'
@@ -218,13 +232,16 @@
 
 ### 2. Get Applied Jobs
 - **Endpoint:** `GET http://localhost:6060/api/v1/application/applied/get`
+- **Description:** Retrieve a list of jobs that the user has applied for.
 - **CURL Example:**
+    ```bash
     ```bash
     curl --location 'http://localhost:6060/api/v1/application/applied/get'
     ```
 
 ### 3. Get Applicants
 - **Endpoint:** `GET http://localhost:6060/api/v1/application/{jobId}/applicants`
+- **Description:** Retrieve a list of applicants for a specific job.
 - **CURL Example:**
     ```bash
     curl --location 'http://localhost:6060/api/v1/application/66d1be4f21764cd9ebbdf117/applicants'
@@ -232,6 +249,7 @@
 
 ### 4. Update Application Status
 - **Endpoint:** `POST http://localhost:6060/api/v1/application/status/{applicationId}/update`
+- **Description:** Update the status of a specific job application.
 - **Request Body:**
     ```json
     {
@@ -240,7 +258,7 @@
     ```
 - **CURL Example:**
     ```bash
-    curl --location 'http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452 e5/update' \
+    curl --location 'http://localhost:6060/api/v1/application/status/66d1bed88beb71fb163452e5/update' \
     --header 'Content-Type: application/json' \
     --data '{
         "status": "accepted"
